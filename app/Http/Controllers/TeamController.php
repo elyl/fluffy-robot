@@ -8,7 +8,7 @@ class TeamController extends Controller
   public function teamsList()
   {
     $teams = Position::all();
-    view('teamlist.blade.php', ['teams' => $teams]);
+    return view('teamlist.blade.php', ['teams' => $teams]);
   }
 }
  ?>
