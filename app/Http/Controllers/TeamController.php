@@ -5,7 +5,7 @@ use App\Position;
 
 class TeamController extends Controller
 {
-  public teamsList()
+  public function teamsList()
   {
     $teams = Position::all();
     view('teamlist.blade.php', ['teams' => $teams]);
