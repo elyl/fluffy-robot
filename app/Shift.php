@@ -3,7 +3,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Shifts extends model
+class Shift extends model
 {
   public $timestamps = false;
 }

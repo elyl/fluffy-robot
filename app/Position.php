@@ -3,7 +3,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Positions extends model
+class Position extends model
 {
   public $timestamps = false;
 }
