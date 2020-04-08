@@ -10,5 +10,15 @@ class TeamController extends Controller
     $teams = Position::all();
     return view('teamlist', ['teams' => $teams]);
   }
+
+  public function showNewTeamForm()
+  {
+      view('newteamform')
+  }
+
+  public function createTeam($request)
+  {
+
+  }
 }
  ?>
