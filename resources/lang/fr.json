@@ -16,8 +16,9 @@
 	"Before proceeding, please check your email for a verification link." : "Avant de continuer, merci de vérifier votre boîte mail.",
 	"click here to request another" : "cliquez ici pour en demander un nouveau",
 	"Team name" : "Nom de l'équipe",
-	"Team Description" : "Description",
+	"Team description" : "Description",
 	"Open" : "Ouverte",
 	"Application required" : "Candidature requise",
-	"Closed" : "Fermée"
+	"Closed" : "Fermée",
+	"Create team" : "Créer l'équipe"
 }
