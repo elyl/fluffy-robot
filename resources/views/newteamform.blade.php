@@ -1,5 +1,7 @@
 <html>
   <body>
+      <h1>{{__('Team Creation')}}</h1>
+
       <form method="POST">
 
       <label for="name">{{__('Team name')}}</label>
@@ -16,6 +18,8 @@
 
       <input type="radio" name="type" id="typeChoice1" />
       <label for="typeChoice3">{{__('Closed')}}</label>
+
+      <br/><br/>
 
       <input type="submit" value="{{__('Create team')}}" />
     </form>
