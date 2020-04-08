@@ -13,7 +13,7 @@ class TeamController extends Controller
 
   public function showNewTeamForm()
   {
-      view('newteamform')
+      view('newteamform');
   }
 
   public function createTeam($request)
