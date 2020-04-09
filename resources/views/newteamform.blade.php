@@ -3,6 +3,7 @@
       <h1>{{__('Team Creation')}}</h1>
 
       <form method="POST">
+        @csrf
 
       <label for="name">{{__('Team name')}}</label>
       <input type="text" name="name" id="name" /><br/>
