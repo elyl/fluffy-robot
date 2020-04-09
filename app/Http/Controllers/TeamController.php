@@ -24,7 +24,6 @@ class TeamController extends Controller
 
   protected function validator(array $data)
   {
-    'firstname' => ['required', 'string', 'max:255'],
       return Validator::make($data, [
           'name' => ['required', 'string', 'max:255'],
           'description' => ['required', 'string', 'max:4096'],
