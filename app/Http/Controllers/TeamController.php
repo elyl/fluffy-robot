@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Validator;
 
 class TeamController extends Controller
 {
+  protected $redirect = "/newTeam";
+
   public function teamList()
   {
     $teams = Position::all();
