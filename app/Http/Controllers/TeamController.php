@@ -27,11 +27,11 @@ class TeamController extends Controller
 
   protected function validator(array $data)
   {
-      /*return Validator::make($data, [
+      return Validator::make($data, [
           'name' => ['required', 'string', 'max:255'],
           'description' => ['required', 'string', 'max:4096'],
           'type' => ['required'],
-      ]);*/
+      ]);
   }
 }
  ?>
