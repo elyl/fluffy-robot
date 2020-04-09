@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use App\Position;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
 
 class TeamController extends Controller
 {
@@ -26,11 +27,11 @@ class TeamController extends Controller
 
   protected function validator(array $data)
   {
-      return Validator::make($data, [
+      /*return Validator::make($data, [
           'name' => ['required', 'string', 'max:255'],
           'description' => ['required', 'string', 'max:4096'],
           'type' => ['required'],
-      ]);
+      ]);*/
   }
 }
  ?>
