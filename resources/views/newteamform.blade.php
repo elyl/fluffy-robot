@@ -23,13 +23,13 @@
       <label for="description">{{__('Team description')}}</label>
       <input type="text" name="description" id="description" /><br/>
 
-      <input type="radio" name="type" id="typeChoice1" />
+      <input type="radio" name="type" id="typeChoice1" value="1" />
       <label for="typeChoice1">{{__('Open')}}</label>
 
-      <input type="radio" name="type" id="typeChoice1" />
+      <input type="radio" name="type" id="typeChoice1" value="2" />
       <label for="typeChoice2">{{__('Application required')}}</label>
 
-      <input type="radio" name="type" id="typeChoice1" />
+      <input type="radio" name="type" id="typeChoice1" value="3" />
       <label for="typeChoice3">{{__('Closed')}}</label>
 
       <br/><br/>
