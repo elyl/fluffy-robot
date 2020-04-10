@@ -24,10 +24,10 @@ class TeamController extends Controller
   {
     $this->validator($request->all())->validate();
 
-    Position::create([['name'] => $request->input('name'),
-                     ['description'] => $request->input('description'),
-                     ['resp'] => 1,
-                     ['flag'] => $request->input('type'),
+    Position::create(['name' => $request->input('name'),
+                     'description' => $request->input('description'),
+                     'resp' => 1,
+                     'flag' => $request->input('type'),
                      ]);
   }
 
