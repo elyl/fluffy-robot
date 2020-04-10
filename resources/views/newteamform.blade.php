@@ -10,8 +10,6 @@
                   @endforeach
               </ul>
           </div>
-      @else
-      <p> Pas d'erreur</p>
       @endif
 
       <form method="POST">
@@ -21,7 +19,7 @@
       <input type="text" name="name" id="name" /><br/>
 
       <label for="description">{{__('Team description')}}</label>
-      <input type="text" name="description" id="description" /><br/>
+      <textarea name="description" id="description" /></textarea><br/>
 
       <input type="radio" name="type" id="typeChoice1" value="1" />
       <label for="typeChoice1">{{__('Open')}}</label>

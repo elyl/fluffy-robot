@@ -26,7 +26,7 @@ class TeamController extends Controller
 
     Position::create(['name' => $request->input('name'),
                      'description' => $request->input('description'),
-                     'resp' => 1,
+                     'resp' => 1, // Changer pour l'id obtenu par la session
                      'flag' => $request->input('type'),
                      ]);
   }
