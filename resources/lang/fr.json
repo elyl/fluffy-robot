@@ -24,5 +24,8 @@
 	"Open" : "Ouverte",
 	"Application required" : "Candidature requise",
 	"Closed" : "Fermée",
-	"Create team" : "Créer l'équipe"
+	"Create team" : "Créer l'équipe",
+	"Change" : "Modifier",
+	"Old Password" : "Ancien mot de passe",
+	"New Password" : "Nouveau mot de passe"
 }
