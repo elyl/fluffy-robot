@@ -15,14 +15,14 @@ class ShiftController extends Controller
     // Récupérer l'id de l'équipe
   }
 
-  public function teamList()
+  public function shiftsList()
   {
     $shifts = Position::where('position', 1) // Remplacer par le bon id obtenu par l'URL
                       ->get();
     return view('shiftlist', ['shifts' => $shifts]);
   }
 
-  public function showNewTeamForm()
+  public function showNewTeamForm($id)
   {
       return view('newshift');
   }
