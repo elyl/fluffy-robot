@@ -23,7 +23,7 @@ Auth::routes();
   Route::get('/teamlist', 'TeamController@teamList');
   Route::get('/newTeam', 'TeamController@showNewTeamForm');
   Route::post('/newTeam', "TeamController@createTeam");
-  Route::get('newShift/team/{id}', 'ShiftController@showNewTeamForm')
+  Route::get('newShift/team/{id}', 'ShiftController@showNewTeamForm');
 //}
 
 Route::get('/home', 'HomeController@index')->name('home');
