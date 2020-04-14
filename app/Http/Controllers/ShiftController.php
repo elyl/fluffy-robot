@@ -11,7 +11,7 @@ class ShiftController extends Controller
 {
   protected $redirect = "/newShift/team/1"; // Changer la team pour correspondre à l'url
 
-  public function __construct($id)
+  public function __construct()
   {
     // Récupérer l'id de l'équipe
     $this->nb = Route::current()->getParameter('id');
