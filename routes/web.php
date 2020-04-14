@@ -22,10 +22,11 @@ Auth::routes();
 //Route::middleware(['Auth'])->group(function () {
   Route::get('/teamlist', 'TeamController@teamList');
   Route::get('/newTeam', 'TeamController@showNewTeamForm');
-  Route::post('/newTeam', "TeamController@createTeam");
+  Route::post('/newTeam', 'TeamController@createTeam');
   Route::get('newShift/team/{id}', 'ShiftController@showNewTeamForm');
   Route::post('newShift', 'ShiftController@createShift');
   Route::get('/shiftsList', 'ShiftController@shiftsList');
+  Route::get('/profile', 'ProfileController@showProfile');
   Route::post('/profile', 'ProfileController@editProfile');
 //}
 
