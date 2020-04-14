@@ -54,6 +54,12 @@ class ProfileController extends Controller
 	]);
     }
 
+
+  public function showProfile()
+  {
+    return view('profile');
+  }
+
     /**
      * Changes user data.
      *
@@ -66,7 +72,7 @@ class ProfileController extends Controller
             'firstname' => $data['firstname'],
             'lastname' => $data['lastname'],
 	    'email' => $data['email'],
-	    'password' => $data['password'],
+	    'password' => Hash::make($data['password']),
         ]);
     }
 }
