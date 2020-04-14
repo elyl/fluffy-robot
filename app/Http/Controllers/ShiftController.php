@@ -5,7 +5,7 @@ use App\Position;
 use App\Shift;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
-use Illuminate\Route;
+use Illuminate\Routing\Route;
 
 class ShiftController extends Controller
 {
