@@ -14,7 +14,7 @@ class ShiftController extends Controller
   public function __construct(Request $request)
   {
     // Récupérer l'id de l'équipe
-    $this->nb = $request->route->parameter('id');
+    $this->nb = $request->route()->parameter('id');
   }
 
   public function shiftsList($id)
