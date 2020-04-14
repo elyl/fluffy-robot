@@ -5,6 +5,7 @@ use App\Position;
 use App\Shift;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
+use Illuminate\Route;
 
 class ShiftController extends Controller
 {
@@ -13,7 +14,7 @@ class ShiftController extends Controller
   public function __construct($id)
   {
     // Récupérer l'id de l'équipe
-    $this->nb = $id;
+    $this->nb = Route::current()->getParameter('id');
   }
 
   public function shiftsList($id)
