@@ -13,25 +13,26 @@ class ShiftController extends Controller
   public function __construct()
   {
     // Récupérer l'id de l'équipe
+    $this->nb = random_int(1, 1000);
   }
 
-  public function shiftsList()
+  public function shiftsList($id)
   {
-    $shifts = Position::where('position', 1) // Remplacer par le bon id obtenu par l'URL
+    $shifts = Position::where('position', $id) // Remplacer par le bon id obtenu par l'URL
                       ->get();
     return view('shiftlist', ['shifts' => $shifts]);
   }
 
   public function showNewTeamForm($id)
   {
-      return view('newshift', ['id' => $id]);
+      return view('newshift', ['id' => $id, 'nb' => $this->nb]);
   }
 
   public function createShift(Request $request)
   {
     $this->validator($request->all())->validate();
 
-    Shift::create(['position' => 1,
+    Shift::create(['position' => $request->input('team_id'),
                    'shift_date' => $request->input('shift_date'),
                    'begin_time' => $request->input('start_time'),
                    'end_time' => $request->input('end_time'),
@@ -45,7 +46,8 @@ class ShiftController extends Controller
           'shift_date' => ['required', 'date'], // Ajouter une contrainte sur les dates de l'événement
           'start_time' => ['required', 'date'],
           'end_time' => ['required'],
-          'vol_count' => ['required', 'integer']
+          'vol_count' => ['required', 'integer'],
+          'team_id' => ['required', 'integer'],
       ]);
   }
 }

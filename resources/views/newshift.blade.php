@@ -2,6 +2,8 @@
   <body>
       <h1>Nouveau shift</h1>
 
+      <p>Test : {{ $nb }} </p>
+
       <p> Equipe : {{ $id }} </p>
 
       @if (count($errors) > 0)
