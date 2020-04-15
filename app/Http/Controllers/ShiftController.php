@@ -9,12 +9,11 @@ use Illuminate\Routing\Route;
 
 class ShiftController extends Controller
 {
-  protected $redirect = "/newShift/team/1"; // Changer la team pour correspondre à l'url
+  protected $redirect = "/newShift/team/"; // Changer la team pour correspondre à l'url
 
   public function __construct(Request $request)
   {
-    // Récupérer l'id de l'équipe
-    $this->nb = $request->route()->parameter('id');
+    $this->redirect += $request->route()->parameter('id');
   }
 
   public function shiftsList($id)
@@ -26,7 +25,7 @@ class ShiftController extends Controller
 
   public function showNewTeamForm($id)
   {
-      return view('newshift', ['id' => $id, 'nb' => $this->nb]);
+      return view('newshift', ['id' => $id]);
   }
 
   public function createShift(Request $request)
