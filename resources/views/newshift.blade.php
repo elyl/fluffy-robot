@@ -14,7 +14,7 @@
           </div>
       @endif
 
-      <form method="POST" action="newShift">
+      <form method="POST" action="{{ $url }}">
         @csrf
         <label for="shift_date">Date : </label>
         <input type="date" name="shift_date" id="shift_date" /> <br/>

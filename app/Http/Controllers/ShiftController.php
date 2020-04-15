@@ -25,7 +25,8 @@ class ShiftController extends Controller
 
   public function showNewTeamForm($id)
   {
-      return view('newshift', ['id' => $id]);
+      $url = action('shiftController@createShift', array('id' => $id));
+      return view('newshift', ['id' => $id, 'url' => $url]);
   }
 
   public function createShift(Request $request)
