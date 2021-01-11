@@ -2,6 +2,7 @@ html, body, form {
 	background-color: #f0e2a8;
 	min-height: 100%;
 	height: auto;
+	font-family: Verdana,serif;
 }
 
 p {
@@ -52,5 +53,5 @@ p {
 	font-size: 0.8em;
 	position: absolute;
 	bottom: 0;
-	width: 90%;
+	width: 99%;
 }
