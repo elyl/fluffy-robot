@@ -17,7 +17,7 @@ class TeamController extends Controller
 
   public function teamListTest()
   {
-    $teams = Position::all();
+    $teams = Position::all()->with('responsable');
     return view('teamlisttest', ['teams' => $teams]);
   }
 
