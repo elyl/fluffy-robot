@@ -1,7 +1,7 @@
 @include('header')
 <div class="content">
   <h1>{{ __('Teams list') }}</h1>
-  <table>
+  <table style="90%">
     <tr>
       <th>{{ __('Team') }}</th>
       <th>{{ __('Leader') }}</th>
