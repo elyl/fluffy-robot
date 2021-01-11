@@ -10,5 +10,10 @@ class Position extends model
   protected $fillable = [
     'name', 'descrption', 'type', 'resp'
   ];
+
+  public function responsable()
+  {
+    return $this->hasOne(User::class, 'resp');
+  }
 }
  ?>
