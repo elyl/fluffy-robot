@@ -1,5 +1,5 @@
-<html>
-  <body>
+@include('header');
+
       <h1>{{__('Team Creation')}}</h1>
 
       @if (count($errors) > 0)
@@ -34,5 +34,5 @@
 
       <input type="submit" value="{{__('Create team')}}" />
     </form>
-  </body>
-</html>
+
+@include('footer');

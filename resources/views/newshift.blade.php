@@ -1,5 +1,4 @@
-<html>
-  <body>
+@include('header');
       <h1>Nouveau shift</h1>
 
       <p>Test : {{ $nb }} </p>
@@ -34,5 +33,4 @@
 
         <input type="submit" value="Créer" />
       </form>
-  </body>
-</html>
+@include('footer');

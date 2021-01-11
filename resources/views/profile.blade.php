@@ -1,9 +1,4 @@
-<html>
-	<header>
-		<title>{{ __('Profile') }}</title>
-	</header>
-
-	<body>
+@include('header');
 		<h1>{{ __('Profile') }}</h1>
 		<p>{{ __('First name') }} : {{ $firstname }}</p>
 		<form method="POST" action="{{ route('change_firstname') }}">
@@ -108,4 +103,4 @@
 			</div>
                </form>         
 
-
+@include('footer');
