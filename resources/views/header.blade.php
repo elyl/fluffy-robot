@@ -23,7 +23,7 @@
 
                 <div class="links header">
                     <a href="http://vps809923.ovh.net/fluffy_robot/public/planning">Planning</a>
-                    <a href="http://vps809923.ovh.net/fluffy_robot/public/teams">Teams</a>
+                    <a href="{{ asset('teamlist') }}">Teams</a>
                </div>
             </div>
         </div>

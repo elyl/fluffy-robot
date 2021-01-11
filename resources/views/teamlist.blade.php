@@ -1,8 +1,18 @@
-@include('header');
-  <h1> Liste des équipes</h1>
-  <ul>
+@include('header')
+<div class="content">
+  <h1>{{ __('Teams list') }}</h1>
+  <table style="width:75%">
+    <tr>
+      <th>{{ __('Team') }}</th>
+      <th>{{ __('Leader') }}</th>
+      <th>{{ __('See shifts') }}</th>
+    </tr>
     @foreach ($teams as $key)
-    <li> {{$key->name}}  - {{$key->responsable()->first()->firstname}} {{$key->responsable()->first()->lastname}} - <a href="">Voir</a></li> <!-- Oui y'a pas de lien, je l'ajouterai plus tard -->
+      <tr> 
+        <td>{{$key->name}}</td>
+	<td>{{$key->responsable()->first()->firstname}} {{$key->responsable()->first()->lastname}}</td>
+        <td><a href="">Voir</a></td> <!-- Oui y'a pas de lien, je l'ajouterai plus tard -->
     @endforeach
-  </ul>
-@include('footer');
+  </table>
+</div>
+@include('footer')
