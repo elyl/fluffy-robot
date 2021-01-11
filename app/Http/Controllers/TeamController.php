@@ -15,6 +15,12 @@ class TeamController extends Controller
     return view('teamlist', ['teams' => $teams]);
   }
 
+  public function teamListTest()
+  {
+    $teams = Position::all();
+    return view('teamlisttest', ['teams' => $teams]);
+  }
+
   public function showNewTeamForm()
   {
       return view('newteamform');
