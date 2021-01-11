@@ -1,0 +1,56 @@
+html, body, form {
+	background-color: #f0e2a8;
+	min-height: 100%;
+	height: auto;
+}
+
+p {
+	color: black;
+}
+
+.flex-center {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.position-ref {
+	position: relative;
+}
+
+.top-right {
+        position: absolute;
+        right: 10px;
+        top: 18px;
+}
+
+.content {
+        text-align: center;
+	min-height: 100%;
+	height: auto;
+	margin: 1em auto;
+}
+
+.title {
+        font-size: 34px;
+}
+
+.links > a {
+         color: #372e29;
+         padding: 0 25px;
+         font-size: 13px;
+         text-decoration: none;
+}
+
+.header {
+	text-align: center;
+}
+
+.footer {
+	color: #9a8262;
+	text-align: center;
+	font-size: 0.8em;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
