@@ -2,9 +2,7 @@ html, body, form {
 	background-color: #f0e2a8;
 	min-height: 100%;
 	height: auto;
-	font-family: verdana;
-	font-family: arial;
-	font-family: serif;
+	font-family: Verdana,serif;
 }
 
 p {
