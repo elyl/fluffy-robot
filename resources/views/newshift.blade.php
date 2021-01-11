@@ -1,8 +1,6 @@
 @include('header');
       <h1>Nouveau shift</h1>
 
-      <p>Test : {{ $nb }} </p>
-
       <p> Equipe : {{ $id }} </p>
 
       @if (count($errors) > 0)
@@ -15,7 +13,7 @@
           </div>
       @endif
 
-      <form method="POST" action="newShift">
+      <form method="POST" action="{{ $url }}">
         @csrf
         <label for="shift_date">Date : </label>
         <input type="date" name="shift_date" id="shift_date" /> <br/>

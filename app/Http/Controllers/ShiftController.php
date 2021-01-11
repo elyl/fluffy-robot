@@ -5,15 +5,15 @@ use App\Position;
 use App\Shift;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Route;
 
 class ShiftController extends Controller
 {
-  protected $redirect = "/newShift/team/1"; // Changer la team pour correspondre à l'url
+  protected $redirect = "/newShift/team/"; // Changer la team pour correspondre à l'url
 
-  public function __construct()
+  public function __construct(Request $request)
   {
-    // Récupérer l'id de l'équipe
-    $this->nb = random_int(1, 1000);
+    $this->redirect .= $request->route()->parameter('id');
   }
 
   public function shiftsList($id)
@@ -25,7 +25,8 @@ class ShiftController extends Controller
 
   public function showNewTeamForm($id)
   {
-      return view('newshift', ['id' => $id, 'nb' => $this->nb]);
+      $url = action('shiftController@createShift', array('id' => $id));
+      return view('newshift', ['id' => $id, 'url' => $url]);
   }
 
   public function createShift(Request $request)
