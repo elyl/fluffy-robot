@@ -13,7 +13,7 @@ class Position extends model
 
   public function responsable()
   {
-    return $this->hasOne(User::class, 'resp', 'id');
+    return $this->hasOne(User::class, 'id', 'resp');
   }
 }
  ?>
