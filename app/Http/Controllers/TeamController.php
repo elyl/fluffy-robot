@@ -11,19 +11,19 @@ class TeamController extends Controller
 
   public function teamList()
   {
-    $teams = Position::all()->responsable();
+    $teams = Position::all();
     return view('teamlist', ['teams' => $teams]);
-  }
-
-  public function teamListTest()
-  {
-    $teams = Position::all()->with('responsable');
-    return view('teamlisttest', ['teams' => $teams]);
   }
 
   public function showNewTeamForm()
   {
       return view('newteamform');
+  }
+
+  public function showTeamProfile(Request $request)
+  {
+    $team = Position::find($request->input('id'));
+    return view('teamprofile', ['team' => $team]);
   }
 
   public function createTeam(Request $request)

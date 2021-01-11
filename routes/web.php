@@ -21,9 +21,8 @@ Auth::routes();
 
 //Route::middleware(['Auth'])->group(function () {
   Route::get('/teamlist', 'TeamController@teamList');
-  Route::get('/teamlistTest', 'TeamController@teamListTest');
   Route::get('/newTeam', 'TeamController@showNewTeamForm');
-  Route::post('/newTeam', 'TeamController@createTeam');
+  Route::post('/teamProfile/team/{id}', 'TeamController@showTeamProfile');
   Route::get('newShift/team/{id}', 'ShiftController@showNewTeamForm');
   Route::post('newShift', 'ShiftController@createShift');
   Route::get('/shiftsList', 'ShiftController@shiftsList');
