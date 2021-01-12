@@ -7,6 +7,8 @@ class Position extends model
 {
   public $timestamps = false;
 
+  protected $primaryKey = 'id';
+
   protected $fillable = [
     'name', 'descrption', 'type', 'resp'
   ];
