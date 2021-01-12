@@ -11,7 +11,8 @@ class TeamController extends Controller
 
   public function teamList()
   {
-    $teams = Position::all();
+    $teams = Position::join('users', 'positions.resp', '=', 'users.id')
+                      ->get(['users.firstname', 'users.lastname', 'positions.*']);
     return view('teamlist', ['teams' => $teams]);
   }
 
@@ -22,7 +23,10 @@ class TeamController extends Controller
 
   public function showTeamProfile(Request $request)
   {
-    $team = Position::findorFail(request('id'));
+    $team = Position::join('users', 'positions.resp', 'users.id')
+                      ->join('shifts', 'shifts.position', 'positions.id')
+                      ->where('users.id', request('id'))
+                      ->get(['users.lastname', 'users.firstname', 'positions.*', 'shifts.*']);
     return view('teamprofile', ['team' => $team]);
   }
 

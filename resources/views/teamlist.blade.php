@@ -10,7 +10,7 @@
     @foreach ($teams as $key)
       <tr>
         <td>{{$key->name}}</td>
-	       <td>{{$key->responsable->firstname}} {{$key->responsable->lastname}}</td>
+	       <td>{{$key->firstname}} {{$key->lastname}}</td>
         <td><a href="">Voir</a></td> <!-- Oui y'a pas de lien, je l'ajouterai plus tard -->
     @endforeach
   </table>
