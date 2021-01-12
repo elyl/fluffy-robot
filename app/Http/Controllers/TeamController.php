@@ -27,7 +27,7 @@ class TeamController extends Controller
                       ->leftjoin('shifts', 'shifts.position', '=', 'positions.id')
                       ->where('positions.id', request('id'))
                       ->get(['users.lastname', 'users.firstname', 'positions.*', 'shifts.*']);
-    return view('teamprofile', ['team' => $team]);
+    return view('teamprofile', ['team' => $team->first()]);
   }
 
   public function createTeam(Request $request)
