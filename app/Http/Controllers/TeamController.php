@@ -25,7 +25,7 @@ class TeamController extends Controller
   {
     $team = Position::join('users', 'positions.resp', '=', 'users.id')
                       ->leftjoin('shifts', 'shifts.position', '=', 'positions.id')
-                      ->where('users.id', request('id'))
+                      ->where('positions.id', request('id'))
                       ->get(['users.lastname', 'users.firstname', 'positions.*', 'shifts.*']);
     return view('teamprofile', ['team' => $team]);
   }
