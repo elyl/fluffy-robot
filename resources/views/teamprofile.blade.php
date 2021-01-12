@@ -1,7 +1,7 @@
 @include('header');
 
 <h1> Apperçu de l'équipe </h1>
-{{$request->input('id')}}
+{{$prout}}
 <!--<h2> {{$team->name}} </h2>
 <p> {{$team->description}} <br/><br/>
 Chef équipe : <a href="">{{$team->responsable->firstname}} </a> <br/>
