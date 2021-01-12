@@ -23,7 +23,7 @@ class TeamController extends Controller
   public function showTeamProfile(Request $request)
   {
     $team = Position::find($request->input('id'));
-    return view('teamprofile', ['team' => $team]);
+    return view('teamprofile', ['team' => $team, 'prout', $request->input('id')]);
   }
 
   public function createTeam(Request $request)
